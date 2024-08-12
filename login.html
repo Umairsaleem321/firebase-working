@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut-icon"  type="x-icon"   href="logo_1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Create a login page with the help of Firebase</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <div class="form-container1">
+        <div class="login-form">
+    <h2>Login</h2>
+    <form onsubmit="Login(event)">
+        <input type="text" class="email" id="Login-email" placeholder="Enter your email Address"><br><br>
+        <input type="password" id="Login-password" placeholder="Enter your password"><br><br>
+        <button type="submit">Login</button><br><br>
+      
+        <button onclick="Logout()">Logout</button>
+        <div>
+            <br>
+            Please login Again after logout.
+          
+           </div>
+        </form>
+</div>
+</div>
+</div>
+
+<hr>
+<div class="form-container1">
+<div class="center">
+<h2><u>Your Account Details</u></h2>
+ <img src="download.jpeg" style="border-radius: 80%;"
+ height="auto" id="propic" width="20%"  alt=""> 
+ <input type="file" accept="image/*" onchange="uploadimg(event)">
+<div id="userdetails"></div>
+</div>
+<br><br>
+<hr>
+<div class="model">
+<h2>User Details</h2>
+<form  action="" id="editsprofile" onsubmit="userupdate(event)"> 
+    <input type="text" name="name"placeholder="Name"><br><br>
+    <input type="email" name="email"placeholder="Email Address"><br><br>
+    <input type="number" name="phone"placeholder="Cell No"><br><br>
+    <input type="text" name="speciality"placeholder="Strength"><br><br>
+    <input type="text" name="portfolioUrl"placeholder="Portfolio Url"><br><br>
+    <input type="text" name="gender"placeholder="Gender"><br><br>
+    <button>SUBMIT</button>
+     <div><b>Go back to</b><a href="./index.html"><b> Home page</b></a></div>
+</form>
+</div>
+
+ <script src="test.js"></script>
+    <script src="firebase_db.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+
+    <script>
+          const firebaseConfig = {
+            apiKey: "AIzaSyD2NgHkrOn4bh8bEB8OwgJ7ooqI4_05s5Q",
+    authDomain: "login-projectnew.firebaseapp.com",
+    projectId: "login-projectnew",
+    storageBucket: "login-projectnew.appspot.com",
+    messagingSenderId: "132792594559",
+    appId: "1:132792594559:web:4569ca22402f63cd694f4a"
+  
+  };
+
+  firebase.initializeApp(firebaseConfig);
+    </script>
+
+    
+</body>
+</html>
